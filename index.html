@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+ <!-- Contenedor principal -->
+  <div class="container">
+
+   <!-- Carrusel de imágenes -->
+   <div class="w3-container">
+    <h2>La programación es como un lienzo en blanco donde la creatividad cobra vida a través del código.</h2>
+    <p>Transforma tu curiosidad en código, y tus sueños en tecnología: ¡Bienvenido al viaje de la programación, donde cada línea es un paso hacia la innovación.</p>
+  </div>
+
+  <div class="w3-content" style="max-width:1200px">
+    <img class="mySlides" src="imagenes/prv1.png" style="width:100%" height="200px" width="600px">
+    <img class="mySlides" src="imagenes/prv2.png" style="width:100%" height="200px" width="600px">
+    <img class="mySlides" src="imagenes/prv3.png" style="width:100%" height="200px" width="600px">
+    <img class="mySlides" src="imagenes/prv4.png" style="width:100%" height="200px" width="600px">
+    <img class="mySlides" src="imagenes/prv5.png" style="width:100%" height="200px" width="600px">
+    <img class="mySlides" src="imagenes/prv6.png" style="width:100%" height="200px" width="600px">
+    
+  </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <!-- <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>  -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
+    }
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+  </script>
+
+    <br>
+    <!-- Encabezado de la página -->
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">DevDiario</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Libros</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <div class="row">
+        <article class="col-68">
+          <h3 class="h4 mp-5 pt-1">¿Cual es la importancia de la programacion en el mundo empresarial?</h3>
+          <article>
+
+            <img class="web"
+              src="https://d2a5isokysfowx.cloudfront.net/wp-content/uploads/2022/03/ramas-de-la-programacion-scaled-1200x675.jpg"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <hr>
+            <p class="Articulo1">
+
+              En los ambientes típicos de los nuevos negocios, pequeños grupos de individuos se reúnen y crean un equipo complementario donde cada uno pone sus habilidades al servicio del sueño de crear una compañía.</p>
+
+            <p class="Articulo1">
+              La importancia de la programación en el mundo actual, destaca porque es una habilidad que abre nuevas puertas en el mundo de la tecnología. Además, ya es una experticia requerida junto a otras más convencionales como la contabilidad, administración y el marketing. Algo que no parece cambiar gracias a los avances de la tecnología, demostrando la importancia de la programación en la vida diaria.</p>
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+
+          <article>
+            <h3>¿Qué es la inteligencia artificial?</h3>
+            <img class="web"
+              src="https://www.fundeu.es/wp-content/uploads/2022/12/reco_-PALABRA-DEL-ANO-IA.png"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+
+            <p class="Articulo1">
+              La inteligencia artificial es la habilidad de una máquina de presentar las mismas capacidades que los seres humanos, como el razonamiento, el aprendizaje, la creatividad y la capacidad de planear.
+
+              <br>
+              <br>
+              La IA permite que los sistemas tecnológicose los sistemas tecnológicos perciban su entorno, se relacionen con él, resuelvan problemas y actúen con un fin específico. La máquina recibe datos (ya preparados o recopilados a través de sus propios sensores, por ejemplo, una cámara), los procesa y responde a ellos.
+              <br>
+              <br>
+              Los sistemas de IA son capaces de adaptar su comportamiento en cierta medida, analizar los efectos de acciones previas y de trabajar de manera autónoma.
+              
+          
+              
+            </p>
+
+           
+
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+          <article>
+            <h3>¿Qué es el internet de las cosas (IoT)?</h3>
+            <img class="web"
+              src="https://www.datamation.com/wp-content/uploads/2021/04/IOT-4.png"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <p class="Articulo1">
+              El Internet de las cosas (IoT) es el proceso que permite conectar los elementos físicos cotidianos al Internet: desde los objetos domésticos comunes, como las bombillas de luz, hasta los recursos para la atención de la salud, como los dispositivos médicos; las prendas y los accesorios personales inteligentes; e incluso los sistemas de las ciudades inteligentes.
+
+              Los dispositivos del IoT que se encuentran dentro de esos objetos físicos suelen pertenecer a una de estas dos categorías: son interruptores (es decir, envían las instrucciones a un objeto) o son sensores (recopilan los datos y los envían a otro lugar). </p>
+            <img class="web" src="https://www.globalsign.com/application/files/7416/3763/0034/General_Banner_WhatisIOT_4_APAC_2021_11_22.jpg"
+              alt="aqui va una image">
+
+            <p class="Articulo1">
+              El término IoT hace referencia a los sistemas de dispositivos físicos que reciben y transfieren datos a través de las redes inalámbricas, con poca intervención humana.
+
+              </p>
+            
+            <p class="Articulo1">
+              El funcionamiento de los sistemas de IoT tradicionales consiste en enviar, recibir y analizar los datos de forma permanente en un ciclo de retroalimentación. Según el tipo de tecnología de IoT, las personas o los sistemas de inteligencia artificial y aprendizaje automático (IA/ML) pueden analizar estos datos casi de inmediato o durante cierto tiempo.
+                
+              </p>
+
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+
+          </article>
+
+
+          <article>
+            <h3>¿Qué son lenguajes de programacion de bajo nivel?</h3>
+            <img class="web"
+              src="https://1.bp.blogspot.com/-D3EyEZKZFoQ/VPC6x6gF-uI/AAAAAAAAAHo/VHC_iT-nlvw/s1600/49d62221feb8da4.gif"
+              alt="">
+
+            <p class="Articulo1">
+              En primer lugar, debes saber que un lenguaje de bajo nivel es un lenguaje de programación. Un lenguaje de programación de bajo nivel, es aquel en el que sus instrucciones ejercen un control directo sobre el hardware y por lo tanto están condicionados por la estructura física de las computadoras que lo soportan. 
+            </p>
+            <p class="Articulo1">
+              El uso del término bajo en su nombre no quiere decir que este lenguaje sea menos potente o importante que un lenguaje de alto nivel, simplemente se refiere a la reducida abstracción que existe entre el lenguaje y el hardware.
+
+              Para que lo entiendas mejor, vamos a darte un ejemplo general: Se utiliza para programar tareas o funciones trascendentales de los sistemas operativos, controladores de dispositivos o de aplicaciones a tiempo real.
+
+              El lenguaje de bajo nivel presenta múltiples ventajas. Es un código sencillo y muy adaptable, con instrucciones directas, de fácil conversión y por si esto no fuera poco, también trabaja a gran velocidad.
+            </p>
+            <p class="Articulo1">
+              El ensamblador es el lenguaje de bajo nivel más sencillo de utilizar, ya que surge ante la gran dificultad que supone programar en código binario o máquina. En ensamblador se pueden expresar las instrucciones directas a la máquina en un lenguaje más natural y sencillo para el programador y que puede ser comprendido por la propia máquina.
+              </p>
+
+            <h3>¿Qué son los framewoks?</h3>
+            <p class="Articulo1">
+              Un framework es un esquema o marco de trabajo que ofrece una estructura base para elaborar un proyecto con objetivos específicos, una especie de plantilla que sirve como punto de partida para la organización y desarrollo de software.
+
+              Utilizar frameworks puede simplificar (y mucho) una tarea o proceso, de ahí que se trate de una de las herramientas habituales que manejan los Digital Workers, porque les ayuda a ser más ágiles y productivos (y eso mola, ¿verdad?).
+
+              
+              <br> <br>
+              Generalmente, los frameworks son usados por programadores porque permiten acelerar el trabajo y favorecer que este sea colaborativo, reducir errores y obtener un resultado de más calidad. Pero no pienses que estas estructuras son cosa solo del departamento IT, qué va, en el mundo online hay frameworks para prácticamente todo: para definir el viaje de compra de un cliente, para aplicar mejoras a un producto digital y tener más conversiones… Y es que, hoy en día, la automatización es la clave para conseguir que cualquier proceso de trabajo sea rápido y eficaz sin perder un ápice de calidad.
+              <br> <br>
+
+              <img class="web"
+                src="https://ares.decipherzone.com/blog-manager/uploads/banner_webp_6e31c361-f096-4a6a-a883-a561798afcd8.webp"
+                alt="">
+
+              <strong>Laravel:</strong> 
+              Laravel es un framework de PHP para ayudarnos en un tipo de desarrollo sobre aplicaciones escritas en este lenguaje de programación. Esté framework o más bien podría llamarlo compañero de ahora en adelante, nos ayuda en muchas cosas al desarrollar una aplicación, por medio de sus sistema de paquetes y de ser un framework del tipo MVC (Modelo-Vista-Controlador) da como resultado que podamos “despreocuparnos” (por así decirlo) en ciertas aspecto del desarrollo, cómo instanciar clases y métodos para usarlos en muchas partes de nuestra aplicación sin la necesidad de escribirlo y repetirlos muchas veces con lo que eso conlleva a la hora de modificar algo en el código.
+              <br> <br>
+              <img class="web" src="https://picperf.io/https://laravelnews.s3.amazonaws.com/images/laravel-featured.png" alt="">
+              <strong>Symfony:</strong> 
+              Symfony es un framework diseñado para desarrollar aplicaciones web basado en el patrón Modelo Vista Controlador. Para empezar, separa la lógica de negocio, la lógica de servidor y la presentación de la aplicación web. Proporciona varias herramientas y clases encaminadas a reducir el tiempo de desarrollo de una aplicación web compleja. Además, automatiza las tareas más comunes, permitiendo al desarrollador dedicarse por completo a los aspectos específicos de cada aplicación. 
+              <br> <br>
+              <img class="web"
+                src="https://www.hazunaweb.com/imagenes/symfony.jpg"
+                alt="">
+
+              <strong>Zend:</strong> 
+              
+              Es un framework de código abierto para desarrollar aplicaciones web y con servicios web PHP. ZF es una implementación que usa código 100% orientado a objetos. En la estructura de los componentes de ZF cada componente está construido con una baja dependencia de otros componentes. Esta arquitectura débilmente acoplada permite a los desarrolladores utilizar los componentes por separado. A menudo se refiere a este tipo de diseño como "use-at-will" (uso a voluntad). 
+            
+            </p>
+            <img class="web"
+              src="http://blog.eltallerweb.com/wp-content/uploads/2013/03/Zend-framework2.jpg"
+              alt="">
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+          </article>
+
+          <article>
+            
+          
+         
+
+            
+            
+
+          </article>
+
+        </article>
+
+        </section>
+        <!-- Barra lateral -->
+        <aside class="col-28">
+          <h2 class="h4">Anuncios</h2>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://i.pinimg.com/564x/e4/3b/30/e43b30464e7f8dfd8af62ab84909f436.jpg" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">El arte de programar es el arte de organizar y dominar la complejidad." - Edsger W. Dijkstra</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW1iMzB1MmttdG16ZGE1NXczYXpwb3dxaDhxN3JuNzBjM3BjNmkyaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/RbDKaczqWovIugyJmW/giphy.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">El código perfecto es la meta, pero la entrega puntual es la prioridad." - Connor McLeod</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://www.psd-dude.com/tutorials/matrix-effect-animation-gif-photoshop-tutorial/matrix-effect-with-code-rain-animation-photoshop-tutorial.gif"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p>Tu tiempo es limitado, así que no lo desperdicies viviendo la vida de otro programador." - Steve Jobs (adaptado)</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img class="web"
+              src="https://balcru.com/cdn/shop/products/colecciones-RogelioILuis-gamer-Frase-Programador-vertical-acrilico.jpg?v=1614809444&width=1024"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p>El código que estás escribiendo hoy es el software que dará forma al mañana
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://pbs.twimg.com/media/BnnQsSdIMAAigA0.jpg" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p>Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media.tenor.com/Z_Ah8rkdZ4YAAAAM/walking-code.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Lt2P88q0Y68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>El desarrollo web es como un viaje interminable de resolución de acertijos, y cada logro es un paso hacia la siguiente maravilla digital..
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFPqYyd0Hh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Escribe código como si la persona que lo mantendrá en el futuro fuera un psicópata violento que sabe dónde vives." - Martin Golding
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/dd-g0g2tfxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>La programación no se trata de lo que haces con el código, sino de lo que puedes hacer con tu mente." - Evelyn H. Lauder
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/mNbnV3aN3KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Un programador de verdad es aquel que sabe resolver problemas." - Edsger W. Dijkstra
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/3yM5uXp-T_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>En la programación, como en la vida, la perseverancia y la paciencia son claves para el éxito." - Felicia Day
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9fwkpxr3Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>El software es como el sexo: mejor cuando es gratis." - Linus Torvalds
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qgxhrJFTOJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Un buen programador es alguien que siempre busca formas de hacer las cosas mejor." - Steve McConnell
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/XXllX0A_9KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>La mejor forma de predecir el futuro es implementarlo." - David Heinemeier Hansson
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white mt-4">
+      <h2>&copy; 2023 Iban Castillo.</h2>
+      <h2></h2>
+
+      <hr>
+      <div class="centrar-contenido">
+        <div class="redes">
+          <h2>Sigueme en mi Redes Sociales</h2>
+
+          <!-- Agregamos font awesome icons -->
+         
+          <a href="https://github.com/1b4nRD12" class="fa fa-github-square"
+            style="font-size:48px; color: rgb(255, 255, 255);"></a>
+          
+
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+</body>
+
+</html>
